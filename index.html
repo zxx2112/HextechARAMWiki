@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hextech ARAM Wiki</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="hero__content">
+      <p class="hero__eyebrow">Howling Abyss Knowledge Base</p>
+      <h1>Hextech ARAM Wiki</h1>
+      <p class="hero__lede">Builds, itemization, and teamwork tips for League of Legends ARAM. Quick-hit notes for fast queues.</p>
+      <div class="hero__actions">
+        <a class="button" href="#meta">Jump to meta snapshot</a>
+        <a class="button button--ghost" href="#champions">View champion cards</a>
+      </div>
+    </div>
+    <div class="hero__badge">
+      <div class="badge__title">Patch Ready</div>
+      <div class="badge__body">Updated for current ARAM changes: tower trinkets, backline minions, and death timers.</div>
+    </div>
+  </header>
+
+  <main class="layout">
+    <section class="panel" id="overview">
+      <div class="panel__header">
+        <h2>ARAM at a glance</h2>
+        <p>One lane. Endless brawls. Manage gold spikes, wave states, and resets to snowball early skirmishes.</p>
+      </div>
+      <div class="grid grid--3">
+        <div class="card card--stat">
+          <p class="label">Objective cadence</p>
+          <p class="stat">Every 2 waves</p>
+          <p class="muted">Focus siege cannon minions to break tower plates safely.</p>
+        </div>
+        <div class="card card--stat">
+          <p class="label">Global shop</p>
+          <p class="stat">/shop or fountain</p>
+          <p class="muted">Use blue essence marks to set up ambushes during shop timer.</p>
+        </div>
+        <div class="card card--stat">
+          <p class="label">Vision</p>
+          <p class="stat">Hexgates</p>
+          <p class="muted">Control brushes and flanks with demolisher and farsight trinkets.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel" id="meta">
+      <div class="panel__header">
+        <h2>Meta snapshot</h2>
+        <p>Quick builds tuned for ARAM modifiers.</p>
+      </div>
+      <div class="grid grid--3" id="meta-tiles"></div>
+    </section>
+
+    <section class="panel" id="champions">
+      <div class="panel__header panel__header--split">
+        <div>
+          <h2>Champion cheat-cards</h2>
+          <p>Search by name and filter by archetype.</p>
+        </div>
+        <div class="controls">
+          <label class="field">
+            <span class="field__label">Search</span>
+            <input type="search" id="champion-search" placeholder="e.g. Lux, Ezreal" />
+          </label>
+          <label class="field">
+            <span class="field__label">Archetype</span>
+            <select id="role-filter">
+              <option value="all">All</option>
+              <option value="poke">Poke</option>
+              <option value="frontline">Frontline</option>
+              <option value="assassin">Assassin</option>
+              <option value="enchanter">Enchanter</option>
+              <option value="mage">Battlemage</option>
+            </select>
+          </label>
+        </div>
+      </div>
+      <div class="grid grid--3" id="champion-grid"></div>
+    </section>
+
+    <section class="panel" id="items">
+      <div class="panel__header panel__header--split">
+        <div>
+          <h2>Item pivots</h2>
+          <p>Swap builds quickly based on lobby needs.</p>
+        </div>
+        <div class="legend">
+          <span class="pill pill--core">Core</span>
+          <span class="pill pill--situational">Situational</span>
+          <span class="pill pill--antiheal">Anti-heal</span>
+        </div>
+      </div>
+      <div class="grid grid--2" id="item-grid"></div>
+    </section>
+
+    <section class="panel" id="playbook">
+      <div class="panel__header">
+        <h2>Playbook</h2>
+        <p>Macro reminders for smoother ARAM games.</p>
+      </div>
+      <div class="timeline" id="playbook-timeline"></div>
+    </section>
+
+    <section class="panel" id="resources">
+      <div class="panel__header">
+        <h2>Quick tips</h2>
+        <p>Small optimizations that stack up over long fights.</p>
+      </div>
+      <ul class="list" id="tips-list"></ul>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Built for fast queues. Share feedback in the ARAM Discord.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
