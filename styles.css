@@ -281,6 +281,35 @@ a {
   flex-wrap: wrap;
 }
 
+.markdown {
+  line-height: 1.7;
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.markdown h3 {
+  margin: 14px 0 4px;
+  color: #c4d4ff;
+  font-size: 18px;
+}
+
+.markdown ul {
+  margin: 0 0 8px 0;
+  padding-left: 18px;
+  color: var(--muted);
+}
+
+.markdown li {
+  margin-bottom: 6px;
+}
+
+.markdown p {
+  margin: 0;
+  color: var(--muted);
+}
+
 @media (max-width: 900px) {
   .hero { grid-template-columns: 1fr; }
 }
