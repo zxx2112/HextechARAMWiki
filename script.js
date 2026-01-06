@@ -19,6 +19,28 @@ const metaTiles = [
   }
 ];
 
+const hextechMarkdown = `
+### 模式速览
+- 海克斯大乱斗是极地大乱斗的特别版本，加入海克斯强化、随机事件与更多经济奖励，整体节奏更快。
+- 开局保留随机英雄/重掷规则，但从 3 分钟开始全队一起选择海克斯强化，6、9 分钟会再次出现更高品质的备选。
+- 地图保留海克斯传送门与全图商店，死亡后可用 Hexgate 更快回到兵线，鼓励持续进攻。
+
+### 海克斯事件
+- 每隔约 4 分钟会在河道或兵线刷新事件：可能掉落金币宝箱、加速地带、爆破果实或治疗包，需要团队抢占视野。
+- 拆塔饰品依旧生效，但事件提供的加速和爆破果实让强势阵容可以更快抢塔皮。
+- 部分事件会在己方二塔后刷出 “海克斯增幅装置”，拾取后提供短时间攻速与技能急速，适合开团或快推。
+
+### 战术重点
+- 3/6/9 分钟的海克斯强化会影响英雄定位：拉克丝、泽拉斯等远程偏好范围扩展与法穿，赛恩、奥恩则需要肉度或护盾强化。
+- 团队至少准备一枚控制或开团强化（如额外位移、冷却重置），以便在事件点先手；增益类（治疗、移速）留给后排。
+- 事件点爆发团时，优先确保炮车存活再接塔皮，失败方可借助 Hexgate 快速集结反扑。
+
+### 经济与装备
+- 事件宝箱与高额助攻奖励让经济膨胀更快，AP 英雄可提早做出大件，前排可快速合成神话后补抗性散件。
+- 若对方拥有持久治疗（索拉卡、蒙多、赛恩等），仍需第一时间做出重伤组件避免被拖入拉扯战。
+- 因为 Hexgate 回防迅速，复活后可先在泉水买控制守卫或侦测饰品，回线时顺便排空草丛。
+`;
+
 const champions = [
   {
     name: '拉克丝',
@@ -144,6 +166,54 @@ function renderMetaTiles() {
     .join('');
 }
 
+function markdownToHtml(markdown) {
+  const lines = markdown.trim().split('\n');
+  let html = '';
+  let inList = false;
+
+  const closeList = () => {
+    if (inList) {
+      html += '</ul>';
+      inList = false;
+    }
+  };
+
+  for (const rawLine of lines) {
+    const line = rawLine.trim();
+
+    if (!line) {
+      closeList();
+      continue;
+    }
+
+    if (line.startsWith('### ')) {
+      closeList();
+      html += `<h3>${line.slice(4)}</h3>`;
+      continue;
+    }
+
+    if (line.startsWith('- ')) {
+      if (!inList) {
+        html += '<ul>';
+        inList = true;
+      }
+      html += `<li>${line.slice(2)}</li>`;
+      continue;
+    }
+
+    closeList();
+    html += `<p>${line}</p>`;
+  }
+
+  closeList();
+  return html;
+}
+
+function renderHextechMarkdown() {
+  const target = document.getElementById('hextech-markdown');
+  target.innerHTML = markdownToHtml(hextechMarkdown);
+}
+
 function renderChampions(filter = { search: '', role: 'all' }) {
   const container = document.getElementById('champion-grid');
   const normalizedSearch = filter.search.trim().toLowerCase();
@@ -227,6 +297,7 @@ function registerFilters() {
 }
 
 renderMetaTiles();
+renderHextechMarkdown();
 renderChampions();
 renderItems();
 renderPlaybook();
