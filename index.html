@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,49 +12,49 @@
 <body>
   <header class="hero">
     <div class="hero__content">
-      <p class="hero__eyebrow">Howling Abyss Knowledge Base</p>
+      <p class="hero__eyebrow">嚎哭深渊资料库</p>
       <h1>Hextech ARAM Wiki</h1>
-      <p class="hero__lede">Builds, itemization, and teamwork tips for League of Legends ARAM. Quick-hit notes for fast queues.</p>
+      <p class="hero__lede">针对极地大乱斗的出装、节奏与团队配合速查笔记，排队间隙快速浏览。</p>
       <div class="hero__actions">
-        <a class="button" href="#meta">Jump to meta snapshot</a>
-        <a class="button button--ghost" href="#champions">View champion cards</a>
+        <a class="button" href="#meta">跳转版本速览</a>
+        <a class="button button--ghost" href="#champions">查看英雄卡片</a>
       </div>
     </div>
     <div class="hero__badge">
-      <div class="badge__title">Patch Ready</div>
-      <div class="badge__body">Updated for current ARAM changes: tower trinkets, backline minions, and death timers.</div>
+      <div class="badge__title">已适配版本</div>
+      <div class="badge__body">覆盖当前 ARAM 改动：塔防饰品、后排小兵与死亡计时。</div>
     </div>
   </header>
 
   <main class="layout">
     <section class="panel" id="overview">
       <div class="panel__header">
-        <h2>ARAM at a glance</h2>
-        <p>One lane. Endless brawls. Manage gold spikes, wave states, and resets to snowball early skirmishes.</p>
+        <h2>ARAM 一眼看懂</h2>
+        <p>一条路，打满整局。掌握金币强势期、兵线状态和回城时机，滚起前期雪球。</p>
       </div>
       <div class="grid grid--3">
         <div class="card card--stat">
-          <p class="label">Objective cadence</p>
-          <p class="stat">Every 2 waves</p>
-          <p class="muted">Focus siege cannon minions to break tower plates safely.</p>
+          <p class="label">资源节奏</p>
+          <p class="stat">每 2 波</p>
+          <p class="muted">优先处理炮车兵，安全拆塔皮。</p>
         </div>
         <div class="card card--stat">
-          <p class="label">Global shop</p>
-          <p class="stat">/shop or fountain</p>
-          <p class="muted">Use blue essence marks to set up ambushes during shop timer.</p>
+          <p class="label">全图商店</p>
+          <p class="stat">/shop 或泉水</p>
+          <p class="muted">利用蓝色提示标记在商店时间埋伏。</p>
         </div>
         <div class="card card--stat">
-          <p class="label">Vision</p>
-          <p class="stat">Hexgates</p>
-          <p class="muted">Control brushes and flanks with demolisher and farsight trinkets.</p>
+          <p class="label">视野</p>
+          <p class="stat">海克斯门</p>
+          <p class="muted">用拆塔饰品和蓝色饰品控制草丛与侧翼。</p>
         </div>
       </div>
     </section>
 
     <section class="panel" id="meta">
       <div class="panel__header">
-        <h2>Meta snapshot</h2>
-        <p>Quick builds tuned for ARAM modifiers.</p>
+        <h2>版本速览</h2>
+        <p>针对 ARAM 调整的快拆出装。</p>
       </div>
       <div class="grid grid--3" id="meta-tiles"></div>
     </section>
@@ -62,23 +62,23 @@
     <section class="panel" id="champions">
       <div class="panel__header panel__header--split">
         <div>
-          <h2>Champion cheat-cards</h2>
-          <p>Search by name and filter by archetype.</p>
+          <h2>英雄速查卡</h2>
+          <p>按名称搜索，按类型筛选。</p>
         </div>
         <div class="controls">
           <label class="field">
-            <span class="field__label">Search</span>
-            <input type="search" id="champion-search" placeholder="e.g. Lux, Ezreal" />
+            <span class="field__label">搜索</span>
+            <input type="search" id="champion-search" placeholder="例如：拉克丝、伊泽瑞尔" />
           </label>
           <label class="field">
-            <span class="field__label">Archetype</span>
+            <span class="field__label">定位</span>
             <select id="role-filter">
-              <option value="all">All</option>
-              <option value="poke">Poke</option>
-              <option value="frontline">Frontline</option>
-              <option value="assassin">Assassin</option>
-              <option value="enchanter">Enchanter</option>
-              <option value="mage">Battlemage</option>
+              <option value="all">全部</option>
+              <option value="poke">消耗</option>
+              <option value="frontline">前排</option>
+              <option value="assassin">刺客</option>
+              <option value="enchanter">增益</option>
+              <option value="mage">战斗法师</option>
             </select>
           </label>
         </div>
@@ -89,13 +89,13 @@
     <section class="panel" id="items">
       <div class="panel__header panel__header--split">
         <div>
-          <h2>Item pivots</h2>
-          <p>Swap builds quickly based on lobby needs.</p>
+          <h2>出装转向</h2>
+          <p>根据阵容需求快速换装。</p>
         </div>
         <div class="legend">
-          <span class="pill pill--core">Core</span>
-          <span class="pill pill--situational">Situational</span>
-          <span class="pill pill--antiheal">Anti-heal</span>
+          <span class="pill pill--core">核心</span>
+          <span class="pill pill--situational">视对局而定</span>
+          <span class="pill pill--antiheal">重伤</span>
         </div>
       </div>
       <div class="grid grid--2" id="item-grid"></div>
@@ -103,23 +103,23 @@
 
     <section class="panel" id="playbook">
       <div class="panel__header">
-        <h2>Playbook</h2>
-        <p>Macro reminders for smoother ARAM games.</p>
+        <h2>作战手册</h2>
+        <p>宏观提醒，帮你打得更顺。</p>
       </div>
       <div class="timeline" id="playbook-timeline"></div>
     </section>
 
     <section class="panel" id="resources">
       <div class="panel__header">
-        <h2>Quick tips</h2>
-        <p>Small optimizations that stack up over long fights.</p>
+        <h2>小贴士</h2>
+        <p>细节拉满，长时间团战更强。</p>
       </div>
       <ul class="list" id="tips-list"></ul>
     </section>
   </main>
 
   <footer class="footer">
-    <p>Built for fast queues. Share feedback in the ARAM Discord.</p>
+    <p>为速排而生，欢迎在 ARAM 频道反馈。</p>
   </footer>
 
   <script src="script.js"></script>

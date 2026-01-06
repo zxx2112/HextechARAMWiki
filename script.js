@@ -1,131 +1,131 @@
 const metaTiles = [
   {
-    title: 'Poke lanes',
-    blurb: 'Abuse long range + waveclear. Play for slow push and chip.',
-    picks: ['Ziggs', 'Xerath', 'Varus'],
-    tip: 'Stand behind melees to dodge skillshots using hitbox padding.'
+    title: '消耗阵容',
+    blurb: '利用射程与清线。慢推磨血后拆塔皮。',
+    picks: ['吉格斯', '泽拉斯', '韦鲁斯'],
+    tip: '站在近战兵后方，用模型掩护躲技能。'
   },
   {
-    title: 'Front-to-back',
-    blurb: 'Layer tanks + enchanters. Guard cannon minions.',
-    picks: ['Sion', 'Ornn', 'Lulu'],
-    tip: 'Let tanks step up for tower plate demolisher procs.'
+    title: '正面团',
+    blurb: '堆前排与增益，守好炮车兵。',
+    picks: ['赛恩', '奥恩', '璐璐'],
+    tip: '让坦克上前吃塔皮，触发拆塔饰品。'
   },
   {
-    title: 'Dive / Reset',
-    blurb: 'Snowball ult chains and execute damage.',
-    picks: ['Katarina', 'Pyke', 'Nilah'],
-    tip: 'Track exhausts. Fight on cannon waves for better resets.'
+    title: '开团/收割',
+    blurb: '滚雪球式大招衔接与处决伤害。',
+    picks: ['卡特琳娜', '派克', '尼菈'],
+    tip: '盯住虚弱。打炮车波时更容易收割。'
   }
 ];
 
 const champions = [
   {
-    name: 'Lux',
+    name: '拉克丝',
     role: 'poke',
-    build: ['Luden\'s Companion', 'Aery + Transcendence', 'Horizon Focus'],
-    micro: ['Hold Q for snowball engages', 'E detonate after enemy sidesteps'],
-    warning: 'Respect tenacity stacks; spread roots to multiple targets.'
+    build: ['卢登的同伴', '召唤：艾黎 + 超然', '集中心灵'],
+    micro: ['留 Q 给雪球先手', 'E 等对手侧移后再引爆'],
+    warning: '注意敌方韧性层数，分散控制多个目标。'
   },
   {
-    name: 'Sion',
+    name: '赛恩',
     role: 'frontline',
-    build: ['Heartsteel', 'Sunfire Aegis', 'Warmog\'s Armor'],
-    micro: ['Charge Q through brushes', 'Save W shield to block poke'],
-    warning: 'Ping revive timer before tower dives.'
+    build: ['心之钢', '日炎圣盾', '狂徒铠甲'],
+    micro: ['草丛蓄力 Q', '保存 W 护盾抵挡消耗'],
+    warning: '塔下开车前先标记复活时间。'
   },
   {
-    name: 'Katarina',
+    name: '卡特琳娜',
     role: 'assassin',
-    build: ['Night Harvester', 'Nashor\'s Tooth', 'Rabadon\'s Deathcap'],
-    micro: ['Look for resets after ally CC', 'Use snowball+Shunpo to dodge skillshots'],
-    warning: 'Wait for silence/exhaust before committing.'
+    build: ['夜之收割者', '纳什之牙', '灭世者的死亡之帽'],
+    micro: ['等队友控制后切入收割', '雪球接瞬步躲技能或进场'],
+    warning: '等沉默/虚弱交掉再交大。'
   },
   {
-    name: 'Ezreal',
+    name: '伊泽瑞尔',
     role: 'poke',
-    build: ['Trinity Force', 'Manamune', 'Serylda\'s Grudge'],
-    micro: ['Weave autos between Qs', 'E diagonally to stay safe'],
-    warning: 'Do not E forward without ally CC ready.'
+    build: ['三相之力', '魔宗', '赛瑞尔达的怨恨'],
+    micro: ['Q 间穿插平 A', 'E 斜向位移保证安全'],
+    warning: '没有队友控制时不要 E 到前排。'
   },
   {
-    name: 'Seraphine',
+    name: '萨勒芬妮',
     role: 'enchanter',
-    build: ['Moonstone Renewer', 'Staff of Flowing Water', 'Ardent Censer'],
-    micro: ['Cast double notes after shielding ally', 'Ult through minions for surprise picks'],
-    warning: 'Space out shields to avoid anti-heal timings.'
+    build: ['月石再生器', '流水法杖', '炽热香炉'],
+    micro: ['护盾给队友后打双音符', '通过兵线放大制造奇袭'],
+    warning: '错开护盾节奏，避免被重伤限制。'
   },
   {
-    name: 'Swain',
+    name: '斯维因',
     role: 'mage',
-    build: ['Liandry\'s Torment', 'Rylai\'s Crystal Scepter', 'Spirit Visage'],
-    micro: ['Pull after ally CC', 'Activate R early in brawls'],
-    warning: 'Track grievous wounds before committing to drain fights.'
+    build: ['兰德里的折磨', '瑞莱的冰晶节杖', '振奋盔甲'],
+    micro: ['队友控制后拉回', '团战提前开大吸血'],
+    warning: '进场前确认对面是否有重伤。'
   }
 ];
 
 const items = [
   {
-    name: 'Oblivion Orb / Executioner\'s',
+    name: '遗失的章节 / 处刑者',
     tags: ['anti-heal'],
-    bullets: ['Buy early vs. Soraka, Mundo, Sion, Aatrox', 'Upgrade only if healing remains oppressive']
+    bullets: ['对面有索拉卡、蒙多、赛恩、剑魔时尽早买', '只有在治疗依旧压制时再升级']
   },
   {
-    name: 'Demolisher Trinket',
+    name: '拆塔饰品',
     tags: ['core'],
-    bullets: ['Use on cannon waves for free plates', 'Pair with tanks or melee supports']
+    bullets: ['炮车波免费塔皮', '与坦克或近战辅助搭配使用']
   },
   {
-    name: 'Farsight / Hextech Sweeper',
+    name: '蓝色饰品 / 海克斯侦测器',
     tags: ['situational'],
-    bullets: ['Place farsight in river flank', 'Sweep brushes before committing to fights']
+    bullets: ['蓝色饰品插在河道侧翼', '开团前先扫掉草丛']
   },
   {
-    name: 'Warmog\'s Armor',
+    name: '狂徒铠甲',
     tags: ['situational'],
-    bullets: ['Great for frontline regen after poke', 'Buy after ~1500 bonus HP thresholds']
+    bullets: ['前排被消耗时的高额回血', '约 1500 额外生命值后购买收益更高']
   },
   {
-    name: 'Seraph\'s Embrace',
+    name: '炽天使之拥',
     tags: ['core'],
-    bullets: ['Massive ARAM mana sustain', 'Rush on mages with Tear spikes']
+    bullets: ['ARAM 的强力回蓝与护盾', '带泪水的法师尽早做出']
   }
 ];
 
 const playbook = [
   {
-    title: 'Level 3 window',
-    body: 'Most ranged champs unlock full combo. Look for snowball engage or tower plate poke.'
+    title: '3 级窗口',
+    body: '大多数远程英雄 3 级解锁完整连招，可用雪球先手或塔皮消耗。'
   },
   {
-    title: 'Cannon wave setup',
-    body: 'Group with tank to escort cannon. Drop demolisher trinket while poke champions zone.'
+    title: '炮车波布置',
+    body: '与坦克一起护送炮车，拆塔饰品落点时由消耗英雄负责压制。'
   },
   {
-    title: 'Respawn timers',
-    body: 'Post-15 minutes, death timers snowball. Trade 1 for 1 only when waves are pushed.'
+    title: '复活时间',
+    body: '15 分钟后死亡计时变长，只在推进状态下接受 1 换 1。'
   },
   {
-    title: 'Reset discipline',
-    body: 'Shop together using /shop timer or fountain deaths. Avoid staggered recalls on losing wave.'
+    title: '同步回城',
+    body: '利用 /shop 或死亡回城一起买装备，避免兵线劣势时的分批回城。'
   }
 ];
 
 const tips = [
-  'Buy boots late on poke champs; prioritize ability haste and mana.',
-  'Hold snowball until after enemies burn dashes. Throw to start or finish picks.',
-  'Ping summoners before you engage; exhaust and cleanse change kill pressure.',
-  'Take ghost poro in brush if enemy lacks sweepers to control river flank.',
-  'Sell Doran\'s items mid-game for control wards or elixir spikes.',
-  'Swap to red trinket when diving versus stealth champions.'
+  '消耗型英雄鞋子可后买，优先急速与蓝量。',
+  '等对面交位移后再丢雪球；要么开团要么收割。',
+  '开团前标记召唤师技能，虚弱与净化会改变击杀线。',
+  '若对面缺侦查，草丛放鬼灵精怪控制河道侧翼。',
+  '中期卖掉多兰装换真眼或药水爆发。',
+  '遇到隐身英雄准备红色饰品再开团。'
 ];
 
 const roleLabels = {
-  poke: 'Poke',
-  frontline: 'Frontline',
-  assassin: 'Assassin',
-  enchanter: 'Enchanter',
-  mage: 'Battlemage'
+  poke: '消耗',
+  frontline: '前排',
+  assassin: '刺客',
+  enchanter: '增益',
+  mage: '战斗法师'
 };
 
 function renderMetaTiles() {
@@ -136,7 +136,7 @@ function renderMetaTiles() {
       <article class="card">
         <div class="card__title">${tile.title}<span class="card__role">${tile.picks.join(', ')}</span></div>
         <p class="muted">${tile.blurb}</p>
-        <div class="tag">Key tip</div>
+        <div class="tag">关键提示</div>
         <p class="muted">${tile.tip}</p>
       </article>
     `
@@ -155,7 +155,7 @@ function renderChampions(filter = { search: '', role: 'all' }) {
   });
 
   if (!filtered.length) {
-    container.innerHTML = '<p class="muted">No champions match that search. Try another name or archetype.</p>';
+    container.innerHTML = '<p class="muted">没有匹配的英雄，请尝试其他名称或类型。</p>';
     return;
   }
 
