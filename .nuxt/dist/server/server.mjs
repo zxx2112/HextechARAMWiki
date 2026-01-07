@@ -1,1 +1,0 @@
-export { default } from "file:///C:/Workspace/HextechARAMWiki/node_modules/@nuxt/vite-builder/dist/runtime/vite-node.mjs"
