@@ -1,0 +1,17 @@
+{
+  "name": "hextech-aram-wiki",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "nuxt dev",
+    "build": "nuxt build",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview"
+  },
+  "dependencies": {
+    "@nuxtjs/color-mode": "latest",
+    "nuxt": "latest",
+    "primeicons": "latest",
+    "primevue": "latest"
+  }
+}
